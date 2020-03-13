@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1009078267299-pk0as19ja4pe7co8a00c4n55s1l117gp.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://teachr-2e541.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1009078267299</string>
+    <string name="google_api_key" translatable="false">AIzaSyAYGEOSkApMIBBu7kQaKsgb44juQAVVxdw</string>
+    <string name="google_app_id" translatable="false">1:1009078267299:android:73b2895831ccfa92</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAYGEOSkApMIBBu7kQaKsgb44juQAVVxdw</string>
+    <string name="google_storage_bucket" translatable="false">teachr.appspot.com</string>
+    <string name="project_id" translatable="false">teachr</string>
+</resources>
