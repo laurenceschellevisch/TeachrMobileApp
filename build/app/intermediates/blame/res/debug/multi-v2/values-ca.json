@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/laurenceschellevisch/Desktop/Inlevermap/Realiseren/teachr/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
+            "outputFile": "/Users/laurenceschellevisch/Desktop/TeachrApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
             "map": [
                 {
                     "source": "/Users/laurenceschellevisch/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/eeb0b68c417133d49aad543a546a1d6b/res/values-ca/values-ca.xml",

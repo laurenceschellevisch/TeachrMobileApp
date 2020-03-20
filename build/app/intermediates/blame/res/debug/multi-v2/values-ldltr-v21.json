@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/laurenceschellevisch/Desktop/Inlevermap/Realiseren/teachr/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "/Users/laurenceschellevisch/Desktop/TeachrApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
                     "source": "/Users/laurenceschellevisch/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-beta01.aar/f62066f11b5d5c78bd96ac32b95fdba5/res/values-ldltr-v21/values-ldltr-v21.xml",

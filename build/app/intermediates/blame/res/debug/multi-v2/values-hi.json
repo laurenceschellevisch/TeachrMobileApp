@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/laurenceschellevisch/Desktop/Inlevermap/Realiseren/teachr/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml",
+            "outputFile": "/Users/laurenceschellevisch/Desktop/TeachrApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml",
             "map": [
                 {
                     "source": "/Users/laurenceschellevisch/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/f649e6cad4654303c61b25c75ba92327/res/values-hi/values.xml",

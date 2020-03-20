@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/laurenceschellevisch/Desktop/Inlevermap/Realiseren/teachr/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/laurenceschellevisch/Desktop/TeachrApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/laurenceschellevisch/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/f649e6cad4654303c61b25c75ba92327/res/values/values.xml",
@@ -37,25 +37,6 @@
                         "startOffsets": "14814,18750",
                         "endColumns": "67,166",
                         "endOffsets": "14877,18912"
-                    }
-                },
-                {
-                    "source": "/Users/laurenceschellevisch/Desktop/Inlevermap/Realiseren/teachr/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "8,2",
-                        "startColumns": "8,4",
-                        "startOffsets": "365,55",
-                        "endLines": "8,7",
-                        "endColumns": "48,12",
-                        "endOffsets": "405,356"
-                    },
-                    "to": {
-                        "startLines": "79,1357",
-                        "startColumns": "4,4",
-                        "startOffsets": "5470,89356",
-                        "endLines": "79,1362",
-                        "endColumns": "44,12",
-                        "endOffsets": "5510,89657"
                     }
                 },
                 {
@@ -133,7 +114,7 @@
                     }
                 },
                 {
-                    "source": "/Users/laurenceschellevisch/Desktop/Inlevermap/Realiseren/teachr/build/app/generated/res/google-services/debug/values/values.xml",
+                    "source": "/Users/laurenceschellevisch/Desktop/TeachrApp/build/app/generated/res/google-services/debug/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -147,6 +128,25 @@
                         "startOffsets": "20043,20188,20295,20378,20482,20586,20706,20796",
                         "endColumns": "144,106,82,103,103,119,89,66",
                         "endOffsets": "20183,20290,20373,20477,20581,20701,20791,20858"
+                    }
+                },
+                {
+                    "source": "/Users/laurenceschellevisch/Desktop/TeachrApp/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "8,2",
+                        "startColumns": "8,4",
+                        "startOffsets": "365,55",
+                        "endLines": "8,7",
+                        "endColumns": "48,12",
+                        "endOffsets": "405,356"
+                    },
+                    "to": {
+                        "startLines": "79,1357",
+                        "startColumns": "4,4",
+                        "startOffsets": "5470,89356",
+                        "endLines": "79,1362",
+                        "endColumns": "44,12",
+                        "endOffsets": "5510,89657"
                     }
                 },
                 {
