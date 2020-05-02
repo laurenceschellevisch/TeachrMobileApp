@@ -7,6 +7,7 @@ import 'package:teachr/language/localizations.dart';
 import 'package:teachr/offers/card_data.dart';
 import 'package:teachr/offers/offers_page.dart';
 import 'package:teachr/offers/savedOffers_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class OverviewPage extends StatefulWidget {
   @override
@@ -61,7 +62,14 @@ class _OverviewPageState extends State<OverviewPage> {
           title: _appBarTitle,
           leading: new Container(),
           backgroundColor: Colors.white,
-        ),
+          actions: <Widget>[
+            // action button
+            IconButton(
+              icon: Icon(Icons.info_outline,
+                color: Colors.black,),
+              onPressed:_launchURL,
+    ),
+  ]),
         body: Column(
           children: <Widget>[
             new Container(
@@ -154,5 +162,13 @@ class _OverviewPageState extends State<OverviewPage> {
   @override
   void dispose() {
     super.dispose();
+  }
+  _launchURL() async {
+    const url = 'https://teachrapp.nl/index.php/portret-van-een-hybride-docent/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

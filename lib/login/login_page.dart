@@ -14,6 +14,7 @@ import 'package:teachr/language/localizations.dart';
 import 'package:teachr/models/user_model.dart';
 import 'package:teachr/themes.dart';
 import 'package:teachr/utils/bubble_indication_painter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key key}) : super(key: key);
@@ -487,6 +488,7 @@ class LoginPageState extends State<LoginPage>
                           ],
                         ),
                       ),
+
                     ],
                   ),
                 ),
@@ -551,20 +553,20 @@ class LoginPageState extends State<LoginPage>
             ],
           ),
           //TODO: Implement 'Forgot Password'
-          // Padding(
-          //   padding: EdgeInsets.only(top: 10.0),
-          //   child: FlatButton(
-          //     onPressed: () {},
-          //     child: Text(
-          //       "Forgot Password?",
-          //       style: TextStyle(
-          //           decoration: TextDecoration.underline,
-          //           color: Colors.white,
-          //           fontSize: 16.0,
-          //           fontFamily: "Roboto"),
-          //     ),
-          //   ),
-          // ),
+           Padding(
+             padding: EdgeInsets.only(top: 10.0),
+             child: FlatButton(
+               onPressed: _launchURL,
+               child: Text(
+                 "Forgot Password?",
+                 style: TextStyle(
+                     decoration: TextDecoration.underline,
+                     color: Colors.white,
+                     fontSize: 16.0,
+                     fontFamily: "Roboto"),
+               ),
+             ),
+           ),
         ],
       ),
     );
@@ -789,5 +791,13 @@ class LoginPageState extends State<LoginPage>
     setState(() {
       _obscureTextSignupConfirm = !_obscureTextSignupConfirm;
     });
+  }
+  _launchURL() async {
+    const url = 'https://teachrapp.nl/index.php/password-reset/';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

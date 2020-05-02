@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
+options: "f2ea120cfb22fe754e4697dc4eb1c9bc"
+build_time: [1587471278, 464399000]
+inputs:
+  "/Users/laurenceschellevisch/Desktop/TeachrApp/ios/Runner/AppDelegate.swift": !dirty [1584706684, 0]
