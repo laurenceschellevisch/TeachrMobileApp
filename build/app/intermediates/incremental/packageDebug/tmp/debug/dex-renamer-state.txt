@@ -1,4 +1,4 @@
-#Tue May 05 17:07:41 CEST 2020
+#Wed May 20 00:29:49 CEST 2020
 base.10=/Users/laurenceschellevisch/Desktop/TeachrApp/build/app/intermediates/transforms/dexMerger/debug/21
 base.9=/Users/laurenceschellevisch/Desktop/TeachrApp/build/app/intermediates/transforms/dexMerger/debug/15
 base.8=/Users/laurenceschellevisch/Desktop/TeachrApp/build/app/intermediates/transforms/dexMerger/debug/12

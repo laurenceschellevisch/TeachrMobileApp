@@ -7,6 +7,7 @@ import 'package:teachr/language/localizations.dart';
 import 'package:teachr/offers/card_data.dart';
 import 'package:teachr/offers/offers_page.dart';
 import 'package:teachr/offers/savedOffers_page.dart';
+import 'package:teachr/themes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class OverviewPage extends StatefulWidget {
@@ -35,7 +36,9 @@ class _OverviewPageState extends State<OverviewPage> {
   @override
   Widget build(BuildContext context) {
     final Text _appBarTitle =
-        Text(LangLocalizations.of(context).trans('offers'));
+        Text(LangLocalizations.of(context).trans('offers'),style: TextStyle(
+          fontFamily: "ReneBieder",color: Color(0xff8F00D2),
+        ),);
     Size screenSize = MediaQuery.of(context).size;
 
     _containerHeight = screenSize.height / 2;
@@ -56,6 +59,7 @@ class _OverviewPageState extends State<OverviewPage> {
     }
 
     return Scaffold(
+      backgroundColor: TeachrColors.teachrBlue,
         appBar: new AppBar(
           textTheme: Theme.of(context).textTheme,
           centerTitle: true,
@@ -71,6 +75,7 @@ class _OverviewPageState extends State<OverviewPage> {
     ),
   ]),
         body: Column(
+
           children: <Widget>[
             new Container(
                 alignment: Alignment.center,
@@ -107,7 +112,8 @@ class _OverviewPageState extends State<OverviewPage> {
                                     sigmaX: 2.0, sigmaY: 2.0),
                                 child: new Container(
                                   decoration: new BoxDecoration(
-                                      color: Colors.white.withOpacity(0.0)),
+                                      color:
+                                      Colors.white.withOpacity(0.0)),
                                 ),
                               )),
                           new Positioned(

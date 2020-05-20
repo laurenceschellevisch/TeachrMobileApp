@@ -9,6 +9,7 @@ import 'package:teachr/language/localizations.dart';
 import 'package:teachr/models/card_model.dart';
 import 'package:teachr/offers/card_data.dart';
 import 'package:teachr/offers/card_detail.dart';
+import 'package:teachr/themes.dart';
 
 class SavedOffersPage extends StatefulWidget {
   final Text title;
@@ -52,11 +53,13 @@ class SavedOffersPageState extends State<SavedOffersPage> with TickerProviderSta
     _constrainedMinHeight = screenSize.height / 50;
 
     return (new Scaffold(
-        backgroundColor: Colors.transparent,
+        backgroundColor: TeachrColors.teachrBlue,
         appBar: AppBar(
           textTheme: Theme.of(context).textTheme,
           centerTitle: true,
-          title: appBarTitle,
+          title: Text("Saved Offers",style:  TextStyle(
+            fontFamily: "ReneBieder",color: Color(0xff8F00D2),
+          ),),
           backgroundColor: Colors.white,
         ),
         body: new Container(
@@ -129,7 +132,7 @@ class SavedOffersPageState extends State<SavedOffersPage> with TickerProviderSta
                               opacity: 0.9,
                               child: Chip(
                                 avatar:
-                                    Icon(Icons.location_on, color: Colors.grey),
+                                    Icon(Icons.location_on, color: Color(0xffFFF200)),
                                 label: Text(offer.distance,
                                     style: TextStyle(color: Colors.grey)),
                                 backgroundColor:
@@ -153,7 +156,7 @@ class SavedOffersPageState extends State<SavedOffersPage> with TickerProviderSta
                               opacity: 0.9,
                               child: Chip(
                                 avatar:
-                                    Icon(Icons.euro_symbol, color: Colors.grey),
+                                    Icon(Icons.euro_symbol, color: Color(0xffFFF200)),
                                 label: Text(offer.salary,
                                     style: TextStyle(color: Colors.grey)),
                                 backgroundColor:

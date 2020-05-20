@@ -61,3 +61,11 @@ flutter:
           weight: 700
         - asset: assets/fonts/Nunito/Nunito-ExtraBold.ttf
           weight: 900
+
+  - family: RedHatDisplay
+    fonts:
+      - asset: assets/fonts/Red_Hat_Display/RedHatDisplay-Italic.ttf
+
+  - family: ReneBieder
+    fonts:
+      - asset: assets/fonts/Choplin/Rene Bieder - Choplin Bold Italic.otf

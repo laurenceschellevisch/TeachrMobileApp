@@ -69,7 +69,9 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar: AppBar(
         textTheme: Theme.of(context).textTheme,
         centerTitle: true,
-        title: _appBarTitle,
+        title: Text("Profile",style: TextStyle(
+          fontFamily: "ReneBieder",color: Color(0xff8F00D2),
+        ),),
         leading: new Container(),
         actions: <Widget>[
           IconButton(

@@ -19,7 +19,7 @@ class TabIndicationPainter extends CustomPainter {
       this.pageController})
       : super(repaint: pageController) {
     painter = new Paint()
-      ..color = Color(0xFFFFFFFF)
+      ..color = Color(0xFFFFF200)
       ..style = PaintingStyle.fill;
   }
 

@@ -11,6 +11,7 @@ import 'package:teachr/offers/back_card.dart';
 import 'package:teachr/offers/card_data.dart';
 import 'package:teachr/globals.dart' as globals;
 import 'package:teachr/models/card_model.dart';
+import 'package:teachr/themes.dart';
 
 class OffersPage extends StatefulWidget {
   final List<CardModel> list;
@@ -20,13 +21,13 @@ class OffersPage extends StatefulWidget {
 
   @override
   _OffersPageState createState() =>
-      new _OffersPageState(data: list, appBarTitle: title);
+      new _OffersPageState(data: list, appBarTitle: title,);
 }
 
 class _OffersPageState extends State<OffersPage> with TickerProviderStateMixin {
   // variables
   static Color backgroundColor = Colors.white;
-  final Text appBarTitle;
+  Text appBarTitle;
 
   List<CardModel> data;
 
@@ -82,12 +83,15 @@ class _OffersPageState extends State<OffersPage> with TickerProviderStateMixin {
     _footerButtonsHeight = screenSize.height / 10;
 
     return (new Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: TeachrColors.teachrBlue,
       appBar: AppBar(
         textTheme: Theme.of(context).textTheme,
         centerTitle: true,
-        title: appBarTitle,
+        title: Text("Available Offers",style:  TextStyle(
+          fontFamily: "ReneBieder",color: Color(0xff8F00D2),
+        ),),
         backgroundColor: Colors.white,
+
 
       ),
       body: new Container(

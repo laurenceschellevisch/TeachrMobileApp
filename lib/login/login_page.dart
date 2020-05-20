@@ -76,21 +76,22 @@ class LoginPageState extends State<LoginPage>
     return new Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(LangLocalizations.of(context).trans('login')),
+        title: Text(LangLocalizations.of(context).trans('login'),style: TextStyle(
+          fontFamily: "ReneBieder",color: Color(0xff8F00D2),
+        ),),
         leading: Container(),
       ),
       key: _scaffoldKey,
-      body: NotificationListener<OverscrollIndicatorNotification>(
-        onNotification: (overscroll) {
-          overscroll.disallowGlow();
-        },
-        child: SingleChildScrollView(
+      body: ListView(
+        children: <Widget> [
+    NotificationListener<OverscrollIndicatorNotification>(
+    onNotification: (overscroll) {
+      overscroll.disallowGlow();
+    },
           child: Container(
             color: TeachrColors.teachrBlue,
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height >= 275.0
-                ? MediaQuery.of(context).size.height
-                : 175.0,
+             height: MediaQuery.of(context).size.height+150,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
@@ -98,7 +99,7 @@ class LoginPageState extends State<LoginPage>
                   padding: EdgeInsets.fromLTRB(56, 8, 56, 0),
                   child: new Image(
                       fit: BoxFit.fitWidth,
-                      image: new AssetImage('assets/img/logo_text_white.png')),
+                      image: new AssetImage('assets/img/icon.png')),
                 ),
                 Padding(
                   padding: EdgeInsets.zero,
@@ -136,7 +137,7 @@ class LoginPageState extends State<LoginPage>
               ],
             ),
           ),
-        ),
+        ),]
       ),
     );
   }
@@ -170,7 +171,7 @@ class LoginPageState extends State<LoginPage>
 
         if (resBody
             .toString()
-            .contains("Invalid username/email and/or password.")) {
+            .contains("You must include 'username'")) {
           showInSnackBar(
               LangLocalizations.of(context).trans('invalid login details'));
         } else if (resBody
@@ -332,7 +333,7 @@ class LoginPageState extends State<LoginPage>
         value,
         textAlign: TextAlign.center,
         style: TextStyle(
-            color: Colors.white, fontSize: 16.0, fontFamily: "Nunito"),
+            color: Colors.white, fontSize: 16.0, fontFamily: "RedHatDisplay"),
       ),
       backgroundColor: Colors.grey[850],
       duration: Duration(seconds: 3),
@@ -343,12 +344,14 @@ class LoginPageState extends State<LoginPage>
     return Container(
       width: 300.0,
       height: 50.0,
+
       decoration: BoxDecoration(
         color: Color(0x552B2B2B),
         borderRadius: BorderRadius.all(Radius.circular(25.0)),
       ),
       child: CustomPaint(
         painter: TabIndicationPainter(pageController: _pageController),
+
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -360,7 +363,7 @@ class LoginPageState extends State<LoginPage>
                 child: Text(
                   "Existing",
                   style: TextStyle(
-                      color: left, fontSize: 16.0, fontFamily: "Nunito"),
+                      color: left, fontSize: 16.0, fontFamily: "RedHatDisplay"),
                 ),
               ),
             ),
@@ -373,7 +376,7 @@ class LoginPageState extends State<LoginPage>
                 child: Text(
                   "New",
                   style: TextStyle(
-                      color: right, fontSize: 16.0, fontFamily: "Nunito"),
+                      color: right, fontSize: 16.0, fontFamily: "RedHatDisplay"),
                 ),
               ),
             ),
@@ -392,13 +395,14 @@ class LoginPageState extends State<LoginPage>
             alignment: Alignment.topCenter,
             overflow: Overflow.visible,
             children: <Widget>[
-              Card(
-                elevation: 2.0,
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                child: Container(
+//              Card(
+//                elevation: 2.0,
+//                color: Colors.white,
+//                shape: RoundedRectangleBorder(
+//                  borderRadius: BorderRadius.circular(8.0),
+//                ),
+//                child:
+                  Container(
                   width: 300.0,
                   child: Column(
                     children: <Widget>[
@@ -410,19 +414,19 @@ class LoginPageState extends State<LoginPage>
                           controller: loginEmailController,
                           keyboardType: TextInputType.emailAddress,
                           style: TextStyle(
-                              fontFamily: "Nunito",
+                              fontFamily: "RedHatDisplay",
                               fontSize: 16.0,
-                              color: Colors.black),
+                              color: Colors.white),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(
                               Icons.mail_outline,
-                              color: Colors.black,
+                              color: Colors.white,
                               size: 22.0,
                             ),
                             hintText: "Email Address",
                             hintStyle:
-                                TextStyle(fontFamily: "Nunito", fontSize: 17.0),
+                                TextStyle(fontFamily: "RedHatDisplay", fontSize: 17.0,color: Colors.white,),
                           ),
                         ),
                       ),
@@ -439,25 +443,25 @@ class LoginPageState extends State<LoginPage>
                           controller: loginPasswordController,
                           obscureText: _obscureTextLogin,
                           style: TextStyle(
-                              fontFamily: "Nunito",
+                              fontFamily: "RedHatDisplay",
                               fontSize: 16.0,
-                              color: Colors.black),
+                              color: Colors.white),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(
                               Icons.lock,
                               size: 22.0,
-                              color: Colors.black,
+                              color: Colors.white,
                             ),
                             hintText: "Password",
                             hintStyle:
-                                TextStyle(fontFamily: "Nunito", fontSize: 17.0),
+                                TextStyle(fontFamily: "RedHatDisplay", fontSize: 17.0,color: Colors.white,),
                             suffixIcon: GestureDetector(
                               onTap: _toggleLogin,
                               child: Icon(
                                 Icons.visibility,
                                 size: 15.0,
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                           ),
@@ -474,7 +478,11 @@ class LoginPageState extends State<LoginPage>
                         child: Row(
                           children: <Widget>[
                             Text(LangLocalizations.of(context)
-                                .trans('rememberLogin')),
+                                .trans('rememberLogin'),style: TextStyle(
+                              fontFamily: "RedHatDisplay",
+                              color: Colors.white,
+
+                            ),),
                             // BUG: The first click on the switch is unresponsive. Unknown cause.
                             Switch(
                                 value: _isLoginRemembered,
@@ -492,14 +500,14 @@ class LoginPageState extends State<LoginPage>
                     ],
                   ),
                 ),
-              ),
+//              ),
               Container(
                 margin: EdgeInsets.only(top: 260.0),
                 decoration: new BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(64.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                      color: TeachrColors.loginGradientStart,
+                      color: Color(0xffFFF200),
                       offset: Offset(1.0, 6.0),
                       blurRadius: 20.0,
                     ),
@@ -511,8 +519,8 @@ class LoginPageState extends State<LoginPage>
                   ],
                   gradient: new LinearGradient(
                       colors: [
-                        TeachrColors.loginGradientEnd,
-                        TeachrColors.loginGradientStart
+                      Color(0xffFFF200),
+                        Color(0xffFFF200)
                       ],
                       begin: const FractionalOffset(0.2, 0.2),
                       end: const FractionalOffset(1.0, 1.0),
@@ -530,9 +538,9 @@ class LoginPageState extends State<LoginPage>
                             .trans('login')
                             .toUpperCase(),
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 25.0,
-                          fontFamily: "Nunito",
+                          fontFamily: "RedHatDisplay",
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -563,7 +571,7 @@ class LoginPageState extends State<LoginPage>
                      decoration: TextDecoration.underline,
                      color: Colors.white,
                      fontSize: 16.0,
-                     fontFamily: "Roboto"),
+                     fontFamily: "RedHatDisplay"),
                ),
              ),
            ),
@@ -581,13 +589,14 @@ class LoginPageState extends State<LoginPage>
             alignment: Alignment.topCenter,
             overflow: Overflow.visible,
             children: <Widget>[
-              Card(
-                elevation: 2.0,
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                child: Container(
+//              Card(
+//                elevation: 2.0,
+//                color: Colors.white,
+//                shape: RoundedRectangleBorder(
+//                  borderRadius: BorderRadius.circular(8.0),
+//                ),
+//                child:
+                Container(
                   width: 300.0,
                   child: Column(
                     children: <Widget>[
@@ -599,18 +608,18 @@ class LoginPageState extends State<LoginPage>
                           controller: signupEmailController,
                           keyboardType: TextInputType.emailAddress,
                           style: TextStyle(
-                              fontFamily: "Nunito",
+                              fontFamily: "RedHatDisplay",
                               fontSize: 16.0,
-                              color: Colors.black),
+                              color: Colors.white),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(
                               Icons.mail_outline,
-                              color: Colors.black,
+                              color: Colors.white,
                             ),
                             hintText: "Email Address",
                             hintStyle:
-                                TextStyle(fontFamily: "Nunito", fontSize: 16.0),
+                                TextStyle(fontFamily: "RedHatDisplay", fontSize: 16.0, color: Colors.white),
                           ),
                         ),
                       ),
@@ -627,24 +636,24 @@ class LoginPageState extends State<LoginPage>
                           controller: signupPasswordController,
                           obscureText: _obscureTextSignup,
                           style: TextStyle(
-                              fontFamily: "Nunito",
+                              fontFamily: "RedHatDisplay",
                               fontSize: 16.0,
-                              color: Colors.black),
+                              color: Colors.white),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(
                               Icons.lock,
-                              color: Colors.black,
+                              color: Colors.white,
                             ),
                             hintText: "Password",
                             hintStyle:
-                                TextStyle(fontFamily: "Nunito", fontSize: 16.0),
+                                TextStyle(fontFamily: "RedHatDisplay", fontSize: 16.0,color: Colors.white),
                             suffixIcon: GestureDetector(
                               onTap: _toggleSignup,
                               child: Icon(
                                 Icons.visibility,
                                 size: 15.0,
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                           ),
@@ -662,24 +671,24 @@ class LoginPageState extends State<LoginPage>
                           controller: signupConfirmPasswordController,
                           obscureText: _obscureTextSignupConfirm,
                           style: TextStyle(
-                              fontFamily: "Nunito",
+                              fontFamily: "RedHatDisplay",
                               fontSize: 16.0,
-                              color: Colors.black),
+                              color: Colors.white),
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             icon: Icon(
                               Icons.lock,
-                              color: Colors.black,
+                              color: Colors.white,
                             ),
                             hintText: "Confirmation",
                             hintStyle:
-                                TextStyle(fontFamily: "Nunito", fontSize: 16.0),
+                                TextStyle(fontFamily: "RedHatDisplay", fontSize: 16.0, color: Colors.white),
                             suffixIcon: GestureDetector(
                               onTap: _toggleSignupConfirm,
                               child: Icon(
                                 Icons.visibility,
                                 size: 15.0,
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                           ),
@@ -688,14 +697,14 @@ class LoginPageState extends State<LoginPage>
                     ],
                   ),
                 ),
-              ),
+//              ),
               Container(
                 margin: EdgeInsets.only(top: 260.0),
                 decoration: new BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(64.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                      color: TeachrColors.loginGradientStart,
+                      color: Color(0xffFFF200),
                       offset: Offset(1.0, 6.0),
                       blurRadius: 20.0,
                     ),
@@ -707,8 +716,8 @@ class LoginPageState extends State<LoginPage>
                   ],
                   gradient: new LinearGradient(
                       colors: [
-                        TeachrColors.loginGradientEnd,
-                        TeachrColors.loginGradientStart
+                      Color(0xffFFF200),
+                        Color(0xffFFF200)
                       ],
                       begin: const FractionalOffset(0.2, 0.2),
                       end: const FractionalOffset(1.0, 1.0),
@@ -725,9 +734,9 @@ class LoginPageState extends State<LoginPage>
                       child: Text(
                         "SIGN UP",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 25.0,
-                            fontFamily: "Nunito",
+                            fontFamily: "RedHatDisplay",
                             fontWeight: FontWeight.w700),
                       ),
                     ),
