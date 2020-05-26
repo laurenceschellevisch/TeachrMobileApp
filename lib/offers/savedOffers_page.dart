@@ -53,7 +53,7 @@ class SavedOffersPageState extends State<SavedOffersPage> with TickerProviderSta
     _constrainedMinHeight = screenSize.height / 50;
 
     return (new Scaffold(
-        backgroundColor: TeachrColors.teachrBlue,
+
         appBar: AppBar(
           textTheme: Theme.of(context).textTheme,
           centerTitle: true,

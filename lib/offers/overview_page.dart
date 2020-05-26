@@ -59,7 +59,7 @@ class _OverviewPageState extends State<OverviewPage> {
     }
 
     return Scaffold(
-      backgroundColor: TeachrColors.teachrBlue,
+
         appBar: new AppBar(
           textTheme: Theme.of(context).textTheme,
           centerTitle: true,
