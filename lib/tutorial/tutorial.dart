@@ -99,15 +99,17 @@ class TutorialState extends State<Tutorial> {
           marginDescription: EdgeInsets.only(top: 30, left: 20, right: 20),
           pathImage: 'assets/img/chat.png',
           backgroundColor: Color.fromRGBO(132, 200, 255, 1.0)),
+
     );
 
     return new IntroSlider(
-      isShowSkipBtn: false,
+      isShowSkipBtn: true,
       slides: this.slides,
       onDonePress: this.onDonePress,
       nameNextBtn: LangLocalizations.of(context).trans('next'),
       nameDoneBtn: LangLocalizations.of(context).trans('done'),
       widthDoneBtn: buttonWidth,
+      isScrollable: true,
     );
   }
 

@@ -2,7 +2,7 @@ name: teachr
 description: Teachr, de app voor hybride-docenten!
 homepage: www.teachrapp.nl
 
-version: 1.0.0+3
+version: 1.0.0+8
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
