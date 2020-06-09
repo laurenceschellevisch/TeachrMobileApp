@@ -178,6 +178,8 @@ class LoginPageState extends State<LoginPage>
             .toString()
             .contains("Your account is awaiting e-mail verification.")) {
           showInSnackBar(LangLocalizations.of(context).trans('verify email'));
+        } else if (resBody.toString().contains("Invalid username/email and/or password.")){
+          showInSnackBar("De gebruikers naam en password komen niet overeen");
         }
 
         if (resBody['status'] == "ok") {
