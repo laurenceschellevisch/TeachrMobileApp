@@ -108,7 +108,7 @@ class TutorialState extends State<Tutorial> {
       onDonePress: this.onDonePress,
       nameNextBtn: LangLocalizations.of(context).trans('next'),
       nameDoneBtn: LangLocalizations.of(context).trans('done'),
-      widthDoneBtn: buttonWidth,
+//      widthDoneBtn: buttonWidth,
       isScrollable: true,
     );
   }
